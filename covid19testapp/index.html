@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div class="main">
+	<form class="box-content">
+		<div class="symptoms">
+
+			<div class="symptoms2">
+				<ul>
+					<label><strong>Do you experience any of the following?</strong></label>
+
+					<h4>Most Common Symptoms</h4><br>
+
+					<li><input type="checkbox" name="symp[]"><img src="https://ucarecdn.com/08aa9802-6853-4055-965b-c4ce03708beb/-/resize/x64/">Fever</li><br>
+
+					<li><input type="checkbox" name="symp[]"><img src="https://ucarecdn.com/e606e561-fdee-4cd3-b74c-21517aa82e88/-/resize/x64/">Cough</li><br>
+
+					<li><input type="checkbox" name="symp[]"><img src="https://ucarecdn.com/7967db83-d186-47ed-a22a-74bba88705e8/-/resize/x64/">Fatigue</li><br><br>
+				</ul>
+			</div>
+
+
+
+
+			<div class="symptoms3">
+
+				<ul>
+					<h4>Some Patients also have:</h4><br><br>
+
+					<li><input type="checkbox" name="symp[]"><img src="https://ucarecdn.com/16e85082-7937-4c0d-9393-73fb238345d1/-/resize/x64/">Aches and Pains</li><br>
+
+					<li><input type="checkbox" name="symp[]"><img src="https://ucarecdn.com/80b384e0-04b0-4144-8f44-de15fc83d947/-/resize/x64/">Runny Nose</li><br>
+
+					<li><input type="checkbox" name="symp[]"><img src="https://ucarecdn.com/c6df1ffd-4292-4798-a825-80326f99206b/-/resize/x64/">Sore Throat</li><br>
+
+					<li><input type="checkbox" name="symp[]"><img src="https://ucarecdn.com/ab793bbb-1014-47a7-a060-371f1830be21/-/resize/x64/">Shortness OF Breath</li><br>
+
+					<li><input type="checkbox" name="symp[]"><img src="https://ucarecdn.com/201558fd-c653-4cec-85d8-8e2378ecb7e3/-/resize/x64/">Diarrhea</li><br>
+				</ul>
+ 
+				<li id="none"><input type="checkbox" id="check" onClick="deselectAll('symp[]')" name="noneoftheabove"><i class="fa fa-check-circle text-success"></i> None of the above</li>
+
+					
+			</div>
+		
+		</div>
+		<input type="button" id="button" value="UPDATE">
+	</form>
+</div>
+
+
+
+
+
+<div class="main">
+	<div class="container">
+		<img id="img" src="img-stock/chris-ried-ieic5Tq8YMk-unsplash.jpg">
+		<div class="overlay">
+			<p class="text">Coding is fun</p>
+		</div>
+	</div>
+	
+	<div class="container">
+		<img id="img" #img src="img-stock/clark-tibbs-oqStl2L5oxI-unsplash.jpg">
+		<div class="overlay">
+			<p class="text">Do Something Great</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<img id="img" src="img-stock/fabian-grohs-PuxTq4DwUHE-unsplash.jpg">
+		<div class="overlay">
+			<p class="text">Coding with Coffee makes you smart</p>
+		</div>	
+	</div>
+</div>
+
+
+
+<script>
+function deselectAll(source) {
+    checkboxes = document.getElementsByName('symp[]');
+    for(var i in checkboxes)
+        checkboxes[i].checked = source.checked;
+}
+</script>
+
+
+<!--
+<label><input type="checkbox" name="sample" class="selectall"/> Select all</label>
+
+<div id="checkboxlist">
+
+    <label><input type="checkbox" name="sample[]"/>checkbox1</label><br />
+    <label><input type="checkbox" name="sample[]"/>checkbox2</label><br />
+    <label><input type="checkbox" name="sample[]"/>checkbox3</label><br />
+    <label><input type="checkbox" name="sample[]"/>checkbox4</label><br />
+
+</div>
+
+
+
+<script type="text/javascript">
+
+$('#check').click(function() {
+    if ($(this).is(':checked')) {
+        $('li input').attr('checked', true);
+    } else {
+        $('li input').attr('checked', false);
+    }
+});
+
+/*
+$("input[type='checkbox'].justone").change(function(){
+    var a = $("input[type='checkbox'].justone");
+    if(a.length == a.filter(":checked").length){
+        $('li input').prop('checked', true);
+    }
+    else {
+        $('li input').prop('checked', false);
+    }
+});
+*/
+
+
+</script>
+-->
+
+
+
+<!--
+<script>
+$(document).ready(function(){
+    $('input:checkbox').click(function() {
+        $('input:checkbox').not(this).prop('checked', false);
+    });
+});
+</script>
+
+
+
+HTML Code:
+
+<input type="checkbox" id="selectall" onClick="selectAll(this,'symp')" />Select All
+<ul>
+<li><input type="checkbox" name="colors[]" value="red" />Red</li>
+<li><input type="checkbox" name="colors[]" value="blue" />Blue</li>
+<li><input type="checkbox" name="colors[]" value="green" />Green</li>
+<li><input type="checkbox" name="colors[]" value="black" />Black</li>
+</ul>
+
+-->
+
+
+
+</body>
+</html>
